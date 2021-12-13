@@ -1,3 +1,4 @@
+//* Day 1
 //! React JSX
 
 //! What is JSX?
@@ -49,9 +50,44 @@ function Welcome(props) {
 //This function is a valid React component because it accepts a single “props” (which stands for properties)
 //object argument with data and returns a React element. We call such components “function components” because they are literally JavaScript functions.
 
-//!React Props
+//* Day 2
+//* React Props
 //!recommended naming props from the component’s own point of view rather than the context in which it is being used.
 //Props are arguments passed into React components.
 //Props are passed to components via HTML attributes.
 //!    props stands for properties.
 //React Props are like function arguments in JavaScript and attributes in HTML.
+
+//! React State
+//  A state can be modified based on user action or network changes
+//  Every time the state of an object changes, React re-renders the component to the browser
+//  The state object is initialized in the constructor
+//  The state object can store multiple properties
+//  this.setState() is used to change the value of the state object
+//  setState() function performs a shallow merge between the new and the previous state
+
+//! setState()
+// State can be updated in response to event handlers, server responses, or prop changes.
+// This is done using the setState() method. The setState() method enqueues all of the updates
+// made to the component state and instructs React to re-render the component and its children
+// with the updated state.
+
+//Always use the setState() method to change the state object, since it will ensure that the component knows it’s been updated and calls the render() method.
+
+//!                                 State                                              Props
+//                   |State is used to store the data of   |        |      Props are used to pass data and     |
+//Use Case:          | components that have to be rendered |        | event handlers to the children components|
+//                   |       to the view                   |        |                                          |
+//                   |_____________________________________|        |__________________________________________|
+//! -------------------------------------------------------------------------------------------------------------------------------------------------------
+//                   |       State holds the data          |        |        Props are immutable               |
+//Mutability         |      and can change over time       |        |    once set, props cannot be changed     |
+//                   |_____________________________________|        |__________________________________________|
+//! -------------------------------------------------------------------------------------------------------------------------------------------------------
+//                   |       State can only be used        |        |    Props can be used in both functional  |
+//Component          |        in class components          |        |              class components            |
+//                   |_____________________________________|        |__________________________________________|
+//! -------------------------------------------------------------------------------------------------------------------------------------------------------
+//                   |  Event handlers generally update    |        |     The parent component sets props      |
+//Updation           |              state                  |        |        for the children components       |
+//                   |_____________________________________|        |__________________________________________|
