@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+
 const Card = (props) => {
   return (
     <div className="main-container">
@@ -21,7 +22,7 @@ const Card = (props) => {
 export default Card;
 
 //! Card
-//Image
-//Title
-//Description
-//Two Links --> Share and Explore
+//Image --> <img src="" alt" />
+//Title   <h2> </h2>
+//Description <h4> </h4>
+//Two Links --> Share and Explore <div> <a href="">asdsdasd</a> <a href="">asdsada</a> </div>

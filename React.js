@@ -63,6 +63,8 @@ function Welcome(props) {
 //  Every time the state of an object changes, React re-renders the component to the browser
 //  The state object is initialized in the constructor
 //  The state object can store multiple properties
+// this.state.number = 1
+// this.setState({number : 1})
 //  this.setState() is used to change the value of the state object
 //  setState() function performs a shallow merge between the new and the previous state
 
