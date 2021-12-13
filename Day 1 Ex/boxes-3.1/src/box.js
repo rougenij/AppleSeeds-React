@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+
 const Box = () => {
   return (
     <div className="big-green-box">

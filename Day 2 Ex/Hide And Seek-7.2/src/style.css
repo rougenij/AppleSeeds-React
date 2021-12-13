@@ -1,0 +1,9 @@
+.stam-box {
+  background-color: orange;
+  height: 50vh;
+  width: 25%;
+}
+
+.none {
+  display: none;
+}

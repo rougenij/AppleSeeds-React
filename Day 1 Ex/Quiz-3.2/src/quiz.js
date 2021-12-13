@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+
 const Quiz = () => {
   return (
     <div className="main-container">

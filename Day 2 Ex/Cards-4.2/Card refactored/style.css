@@ -1,0 +1,33 @@
+.main {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-container {
+  padding: 1rem;
+  border: 1px solid #000;
+  width: 500px;
+  box-shadow: #000 5px 10px 10px;
+}
+
+.picture {
+  width: 480px;
+  height: 500px;
+}
+
+.links a {
+  color: orange;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: larger;
+}
+.linkone {
+  border: 1px solid black;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+}
+.linktwo {
+  border: 1px solid black;
+  padding: 0.5rem;
+}

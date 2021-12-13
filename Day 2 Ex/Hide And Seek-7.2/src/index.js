@@ -1,13 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Button from "./Button";
-
+import ShowButton from "./hideButton";
 import "./style.css";
 
 function App() {
   return (
     <div className="main">
-      <Button />
+      <ShowButton />
     </div>
   );
 }
