@@ -1,0 +1,24 @@
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: black;
+  opacity: 0.5;
+}
+
+.spinner {
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  border: 10px solid gray;
+  border-top-color: rgb(192, 245, 245);
+  animation: spinner 1s linear infinite;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}

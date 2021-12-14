@@ -1,0 +1,14 @@
+.animation {
+  background-color: red;
+  animation: move 1s ease-in-out forwards;
+  margin: 1rem;
+  position: relative;
+}
+@keyframes move {
+  from {
+    left: -200px;
+  }
+  to {
+    left: 0;
+  }
+}

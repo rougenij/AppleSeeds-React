@@ -93,3 +93,69 @@ function Welcome(props) {
 //                   |  Event handlers generally update    |        |     The parent component sets props      |
 //Updation           |              state                  |        |        for the children components       |
 //                   |_____________________________________|        |__________________________________________|
+
+//* Day 3
+//* LifeCycle Methods
+//
+//
+//You can think of React lifecycle methods as the series of events that happen from the birth of a React component to its death.
+//Every component in React goes through a lifecycle of events. I like to think of them as going through a cycle of birth, growth, and death.
+//
+//! Mounting – Birth of your component
+//! Update – Growth of your component
+//! Unmount – Death of your component
+//
+//! Common React Lifecycle Methods
+//
+//! render()
+//! The only required method withing a class component in React!
+// The render() method is the most used lifecycle method.
+//You will see it in all React classes. This is because render() is the only required method within a class component in React.
+//! A render() method has to be pure with no side-effects.
+//! You cannot modify the component state within the render().
+//! componentDidMount()
+//
+//componentDidMount() is called as soon as the component is mounted and ready. This is a good place to initiate API calls, if you need to load data from a remote endpoint.
+//Unlike the render() method, componentDidMount() allows the use of setState(). Calling the setState() here will update state and cause another
+//rendering but it will happen before  the browser updates the UI. This is to ensure that the user will not see any UI updates with the double rendering.
+//! You can modify the component state within the componentDidMount(), but use it with caution.
+//
+//! componentDidUpdate()
+//
+//This lifecycle method is invoked as soon as the updating happens. The most common use case for the componentDidUpdate() method is updating the DOM in response to prop or state changes.
+//You can call setState() in this lifecycle, but keep in mind that you will need to wrap it in a condition to check for state or prop changes from previous state.
+//Incorrect usage of setState() can lead to an infinite loop.
+//! You can modify the component state within the componentDidUpdate(), but use it with caution.
+//
+//! componentWillUnmount()
+//
+//As the name suggests this lifecycle method is called just before the component is unmounted and destroyed.
+//If there are any cleanup actions that you would need to do, this would be the right spot.
+//As the name suggests this lifecycle method is called just before the component is unmounted and destroyed.
+//If there are any cleanup actions that you would need to do, this would be the right spot.
+//! You cannot modify the component state in componentWillUnmount lifecycle.
+//
+
+//! Recap
+// React component lifecycle has three categories – Mounting, Updating and Unmounting.
+
+// The render() is the most used lifecycle method.
+// It is a pure function.
+// You cannot set state in render()
+
+// The componentDidMount() happens as soon as your component is mounted.
+// You can set state here but with caution.
+
+// The componentDidUpdate() happens as soon as the updating happens.
+// You can set state here but with caution.
+
+// The componentWillUnmount() happens just before the component unmounts and is destroyed.
+// This is a good place to cleanup all the data.
+// You cannot set state here.
+
+// The shouldComponentUpdate() can be used rarely.
+// It can be called if you need to tell React not to re-render for a certain state or prop change.
+// This needs to be used with caution only for certain performance optimizations.
+// The two new lifecycle methods are getDerivedStateFromProps() and getSnapshotBeforeUpdate().
+// They need to be used only occasionally.
+// Not many examples are out there for these two methods and they are still being discussed and will have more references in the future.
