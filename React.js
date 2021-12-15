@@ -159,3 +159,43 @@ function Welcome(props) {
 // The two new lifecycle methods are getDerivedStateFromProps() and getSnapshotBeforeUpdate().
 // They need to be used only occasionally.
 // Not many examples are out there for these two methods and they are still being discussed and will have more references in the future.
+
+//* Day 3
+//* Event handlers
+// Just like HTML DOM events, React can perform actions based on user events.
+// React has the same events as HTML: click, change, mouseover etc.
+
+//! Adding Events
+// React events are written in camelCase syntax:
+// onClick instead of onclick.
+// React event handlers are written inside curly braces:
+// onClick={shoot}  instead of onClick="shoot()".
+//! For Example:
+<div>
+  <button onClick={shoot}>Take the Shot!</button> // In React
+  <button onclick="shoot()">Take the Shot!</button> // In HTML
+</div>;
+
+//! Passing Arguments
+//To pass an argument to an event handler, use an arrow function.
+
+//! React Event Object
+// Event handlers have access to the React event that triggered the function.
+// In our example the event is the "click" event.
+
+//* Form
+
+// Handling forms is about how you handle the data when it changes value or gets submitted.
+// In HTML, form data is usually handled by the DOM. ' un-controlled '
+// In React, form data is usually handled by the components. ' controlled '
+// When the data is handled by the components, all the data is stored in the component state.
+// You can control changes by adding event handlers in the onChange attribute.
+// We can use the useState Hook to keep track of each inputs value and provide a "single source of truth" for the entire application.
+
+//! Multiple Input Fields
+// You can control the values of more than one input field by adding a name attribute to each element.
+// We will initialize our state with an empty object.
+// To access the fields in the event handler use the event.target.name and event.target.value syntax.
+// To update the state, use square brackets [bracket notation] around the property name.
+
+//! Note: We use the same event handler function for both input fields, we could write one event handler for each, but this gives us much cleaner code and is the preferred way in React.
