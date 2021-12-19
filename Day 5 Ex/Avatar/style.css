@@ -1,0 +1,39 @@
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  border: 1px solid #000;
+  border-radius: 10px;
+  margin: 0.5rem;
+  padding: 1rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.users-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar-container {
+  width: 20%;
+  text-align: center;
+  margin: 0.5rem;
+}
+
+.name {
+  font-size: 1.5rem;
+}
+
+.image img {
+  object-fit: cover;
+  border-radius: 50%;
+}
