@@ -2,7 +2,6 @@ import React from "react";
 import data from "./data";
 import Name from "./name";
 import Card from "./card";
-import "./style.css";
 
 class App extends React.Component {
   state = { names: [], beforeNinety: [] };
