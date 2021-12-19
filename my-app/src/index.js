@@ -4,11 +4,7 @@ import "./style.css";
 import ChuckNorris from "./ChuckNorris";
 
 function App() {
-  return (
-    <div className="main">
-      <ChuckNorris />
-    </div>
-  );
+  return <div className="main"></div>;
 }
 
 ReactDOM.render(<App />, document.querySelector("#root"));
