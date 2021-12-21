@@ -1,13 +1,15 @@
 import React from "react";
+import "../../style.css";
 
-function NotFound() {
+const PageNotFound = () => {
   return (
-    <div>
-      <p style={{ fontSize: "5rem", color: "red", textAlign: "center" }}>
-        Nice Try accessing an unavaiable page buddy
-      </p>
+    <div id="wrapper">
+      <img src="https://i.imgur.com/qIufhof.png" alt="404" />
+      <div id="info">
+        <h3>This page could not be found</h3>
+      </div>
     </div>
   );
-}
+};
 
-export default NotFound;
+export default PageNotFound;
