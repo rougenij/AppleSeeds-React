@@ -14,10 +14,10 @@ function ProductDetails() {
         <img src={storeProducts[id - 1].imageUrl} alt="Product" />
       </div>
       <div className="product-price">
-        <h4>{storeProducts[id - 1].price}</h4>
+        <h4>Price : {storeProducts[id - 1].price}</h4>
       </div>
       <div className="product-size">
-        <h4>{storeProducts[id - 1].size}</h4>
+        <h4>Size: {storeProducts[id - 1].size}</h4>
       </div>
       <Link to="/products">
         <button>Back</button>

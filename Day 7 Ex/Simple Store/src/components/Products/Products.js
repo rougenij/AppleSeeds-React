@@ -13,7 +13,7 @@ class Products extends React.Component {
   handleProducts = () => {
     return this.state.data.map((product) => {
       return (
-        <Link to={`/product/${product.id}`}>
+        <Link to={`${this.props.location.pathname}/${product.id}`}>
           <div key={product.id} className="product">
             <h3>{product.title}</h3>
             <img src={product.imageUrl} alt="Product" />
