@@ -1,61 +1,57 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+import "./app.css";
+
 const App = () => {
+  const [apiData, setApiData] = useState([]);
   const [term, setTerm] = useState("hooks");
-  const [changableTerm, setChangableTerm] = useState("hooks");
-  const [results, setResults] = useState([]);
-  const [error, setError] = useState(false);
+  const [isSending, setIsSending] = useState(false);
 
   useEffect(() => {
-    const fetchData = async () => {
+    (async () => {
+      await getData();
+    })();
+  }, []);
+
+  const getData = async () => {
+    if (isSending) return;
+
+    setIsSending(true);
+    if (term.length) {
       try {
-        const data = await axios.get(
+        const { data } = await axios.get(
           `https://hn.algolia.com/api/v1/search?query=${term}`
         );
-        setResults(data.data.hits);
+        setApiData(data.hits);
+        console.log(data.hits);
       } catch (e) {
         console.log(e);
-        setError(true);
+      } finally {
+        setIsSending(false);
       }
-    };
-    if (term) {
-      fetchData();
     }
-  }, [term]);
-
-  const showData = () => {
-    return results.map((result, i) => {
-      return (
-        <li key={i} className="result-display">
-          {" "}
-          <a href={result.url}>{result.title}</a>
-        </li>
-      );
-    });
   };
 
-  const handleClick = () => {
-    setTerm(changableTerm);
-  };
-
-  if (error) {
-    return (
-      <div>
-        <h1>Error occured, refresh the page!</h1>
-      </div>
-    );
-  }
   return (
-    <div>
+    <div className="app">
       <input
-        value={changableTerm}
-        onChange={(e) => {
-          setChangableTerm(e.target.value.toLowerCase());
-        }}
-      ></input>{" "}
-      <button onClick={handleClick}>Search</button>
-      <ul>{showData()}</ul>
+        type="text"
+        value={term}
+        onChange={(event) => setTerm(event.target.value)}
+      />
+      <button onClick={getData}>Search</button>
+      {isSending && <h4>Loading...</h4>}
+      <ul>
+        {apiData.map(
+          (hit) =>
+            hit.url && (
+              <li key={hit.objectID}>
+                <a href={hit.url}>{hit.title}</a>
+              </li>
+            )
+        )}
+      </ul>
     </div>
   );
 };
